@@ -1,0 +1,41 @@
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ page.title }} - {{ site.title }}</title>
+    <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ '/' | relative_url }}">{{ site.title }}</a></h1>
+      <nav>
+        <a href="{{ '/about/' | relative_url }}">About</a>
+        <a href="{{ '/blog/' | relative_url }}">Blog</a>
+      </nav>
+    </header>
+    <main>
+      <article>
+        <h2>{{ page.title }}</h2>
+        <p class="date">{{ page.date | date: '%b %d, %Y' }}</p>
+
+        {% if page.code_image %}
+        <div class="code-block">
+          <img src="{{ page.code_image | relative_url }}" alt="Code example">
+        </div>
+        {% endif %}
+
+        <div class="content">
+          {{ content }}
+        </div>
+      </article>
+    </main>
+    <footer>
+      <p>© {{ site.time | date: '%Y' }} {{ site.author }}</p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+@import "vs.css";
+/* 全局样式 */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 750px; /* 限制页面内容宽度 */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    font-size: 18px; /* 设置全局字体大小 */
+}
+
+hr {
+    border: 0;
+    border-top: 2px solid #ddd; /* 设置浅灰色分割线 */
+    margin: 20px 0; /* 设置上下间距 */
+    width: 100%;
+}
+
+/* 移除所有链接的下划线 */
+a {
+    text-decoration: none; /* 去掉默认下划线 */
+}
+a:hover {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+    color: #007acc; /* 鼠标悬停时的颜色 */
+}
+
+/* 头部样式 */
+header {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+
+header .container {
+    display: flex; /* 使用 Flexbox 布局 */
+    flex-direction: column;
+    align-items: flex-start; /* 左对齐所有内容 */
+}
+
+header h1 {
+    font-size: 2.3em;
+    margin: 0;
+    padding: 0;
+}
+
+header nav {
+    margin-top: 5px;
+}
+
+header nav a {
+    margin-right: 20px;
+    text-decoration: none;
+    color: #007acc;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* 主要内容样式 */
+main {
+    margin-top: 20px;
+}
+
+main .homepage h1 {
+    font-size: 1.8em;
+    color: #000;
+}
+
+main .homepage p {
+    font-size: 1em;
+    margin: 15px 0;
+}
+
+/* 页脚样式 */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #666;
+}
+
+/* Education Section */
+.education {
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+}
+.edu-entry {
+    display: flex;
+    margin-bottom: 15px; /* 每条记录的间距 */
+}
+
+.edu-dates {
+    width: 30%; /* 左侧时间栏宽度 */
+    font-weight: bold;
+    color: #333;
+    text-align: left;
+}
+
+.edu-details {
+    width: 70%; /* 右侧内容宽度 */
+}
+
+.edu-details strong {
+    font-size: 1em;
+    color: #000;
+    display: block; /* 确保标题单独占一行 */
+}
+
+.edu-details p {
+    margin: 0;
+    font-size: 0.95em; /* 字体稍小 */
+    line-height: 1.5;
+    color: #333;
+}
+
+.edu-details em {
+    font-style: italic;
+    color: #666;
+}
+
+
+/* 代码块的容器样式 */
+pre {
+    background-color: #f5f5f5; /* 设置背景颜色 */
+    border: 1px solid #ccc; /* 添加边框 */
+    border-radius: 8px; /* 设置圆角 */
+    padding: 16px; /* 内边距 */
+    overflow-x: auto; /* 如果内容超出宽度，则允许水平滚动 */
+    margin-bottom: 1.5em; /* 与上下内容的间距 */
+  }
+  
+  /* 内部代码文字的样式 */
+  code {
+    font-family: "Courier New", Courier, monospace; /* 设置等宽字体 */
+    font-size: 0.9em; /* 调整字体大小 */
+    color: #4a4277; /* 设置代码文字颜色 */
+  }
+  
+  /* 语法高亮的基础样式 */
+  .token-keyword {
+    color: #d73a49; /* 关键词颜色 */
+    font-weight: bold;
+  }
+  
+  .token-string {
+    color: #d01c22; /* 字符串颜色 */
+  }
+  
+  .token-comment {
+    color: #6a737d; /* 注释颜色 */
+    font-style: italic;
+  }
+  
