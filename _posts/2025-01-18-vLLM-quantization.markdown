@@ -73,6 +73,7 @@ vLLM will create layers(weights) according to quant_method when they initialize 
 ### Inference
 
 If there is a quantization method, it will call its *apply()* in the __forward__ path.
+Below is an example for __gptq_marlin__ method.
 ```python
 def apply(
         self,
