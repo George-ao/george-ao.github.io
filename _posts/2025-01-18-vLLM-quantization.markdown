@@ -23,7 +23,7 @@ vllm/config.py: *__init__():* store relevant infomation of the model in __model_
 
 model_runner.py: *self.model = get_model(vllm_config=self.vllm_config)* 
 
-**1.initialize model:** Initialize a model with the given configurations → __init__() of each model
+&nbsp;&nbsp;&nbsp;&nbsp;**1.initialize model:** Initialize a model with the given configurations → __init__() of each model
 
 vllml/model_executor/model_loader/loader.py
 
@@ -46,16 +46,15 @@ vLLM will create layers(weights) according to quant_method when they initialize 
             in WEIGHT_LOADER_V2_SUPPORTED else self.weight_loader))
 ```
 
-**2.load weight:** loader.py: call *load_model()* 
+&nbsp;&nbsp;&nbsp;&nbsp;**2.load weight:** loader.py: call *load_model()* 
 
 1. load weights
-
 ```
             loaded_weights = model.load_weights(
                 self._get_all_weights(model_config, model))
 ```
 
-1. Call *process_weights_after_loading()* of quantization to repack the weights for kernel
+2. Call *process_weights_after_loading()* of quantization to repack the weights for kernel
 
 ```python
             for _, module in model.named_modules():
