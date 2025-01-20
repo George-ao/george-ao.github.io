@@ -32,9 +32,8 @@ vllml/model_executor/model_loader/loader.py
                 model = _initialize_model(vllm_config=vllm_config)
 ```
 
-     ****vLLM will create layers(weights) according to quant_method when they initialize the model
-
-```
+vLLM will create layers(weights) according to quant_method when they initialize the model
+```python
     self.quant_method.create_weights(
         layer=self,
         input_size_per_partition=self.input_size,
