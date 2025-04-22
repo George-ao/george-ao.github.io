@@ -5,6 +5,6 @@ title: Home
 
 ## Hi there!
 
-I’m a senior year student at Zhejiang University and UIUC. My current interest lies in Machine Learning and AI infra, especially LLM inference. I am trying to write a [blog]({{ '/blog/' | relative_url }}) here.
+I am an incoming student @ CMU MCDS program. My current interests lie in **Machine Learning Systems**, particularly optimizing **LLM inference**. I am starting to write [blog]({{ '/blog/' | relative_url }}) here.
 
 Learn more about me on the [About]({{ '/about/' | relative_url }}) page.
