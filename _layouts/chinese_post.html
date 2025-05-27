@@ -1,6 +1,9 @@
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<script type="text/javascript" id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html lang="zh"> <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ page.title }} - {{ site.title }}</title>
@@ -13,6 +16,9 @@
 
       gtag('config', 'G-Q88V78T8Z7');
     </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -23,21 +29,21 @@
       </nav>
     </header>
     <main>
-      {{ content }}
+      <article>
+        <h2>{{ page.title }}</h2>
+        {% if page.code_image %}
+        <div class="code-block">
+          <img src="{{ page.code_image | relative_url }}" alt="Code example">
+        </div>
+        {% endif %}
+
+        <div class="content chinese-content">
+          {{ content }}
+        </div>
+      </article>
     </main>
     <footer>
       <p>© {{ site.time | date: '%Y' }} {{ site.author }}</p>
     </footer>
-
-    <script type="module">
-      // 引入 Mermaid 库
-      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
-
-      // 初始化 Mermaid (可以添加配置选项)
-      // 例如，设置主题: mermaid.initialize({ startOnLoad: true, theme: 'neutral' });
-      // 可选主题: 'default', 'neutral', 'dark', 'forest', 'base' (需要额外 CSS 或配置)
-      mermaid.initialize({ startOnLoad: true });
-
-    </script>
-    </body>
+  </body>
 </html>

@@ -1,4 +1,5 @@
-@import "vs.css";
+/* @import "vs.css"; */
+@import "syntax-pastie.css";
 /* 全局样式 */
 body {
     font-family: Arial, sans-serif;
@@ -125,20 +126,28 @@ footer {
 
 
 /* 代码块的容器样式 */
-pre {
-    background-color: #f5f5f5; /* 设置背景颜色 */
-    border: 1px solid #ccc; /* 添加边框 */
-    border-radius: 8px; /* 设置圆角 */
-    padding: 16px; /* 内边距 */
-    overflow-x: auto; /* 如果内容超出宽度，则允许水平滚动 */
-    margin-bottom: 1.5em; /* 与上下内容的间距 */
+  pre {
+    background-color: #f8f9fa; 
+    border: 1px solid #dee2e6;  /*更柔和的边框颜色*/
+    border-radius: 6px;         /*轻微的圆角*/
+    /* padding: 1em;               内边距 */
+    overflow-x: auto;           /* 长代码行水平滚动 */
+    margin-bottom: 1.5em;       /* 与下方内容的间距 */
+    line-height: 1.8;           /* 代码块内的行高，增加可读性 */
   }
-  
   /* 内部代码文字的样式 */
-  code {
-    font-family: "Courier New", Courier, monospace; /* 设置等宽字体 */
-    font-size: 0.9em; /* 调整字体大小 */
-    color: #4a4277; /* 设置代码文字颜色 */
+  pre > code {
+    font-family: "Ubuntu Mono", monospace; /* 现代等宽字体栈 */
+    font-size: 0.8em;           /* 字体大小，可以根据 pre 的字体大小调整 */
+    color: #212529;             /* 代码的基础文字颜色，vs.css 会给特定token上色 */
+    
+    /* 以下很重要，确保 pre > code 不会有自己的背景、边框、内边距，这些由 pre 控制 */
+    background: none !important; 
+    padding: 0 !important;
+    border: none !important;
+    text-shadow: none; /* 去除可能的文字阴影干扰 */
+    
+    display: block; /* 有助于确保代码块正确渲染和换行 */
   }
   
   /* 语法高亮的基础样式 */
@@ -156,3 +165,64 @@ pre {
     font-style: italic;
   }
   
+
+
+
+
+
+/* Styles for Chinese Posts */
+.chinese-content {
+  font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', sans-serif; /* Font stack for Chinese */
+  font-size: 18px; /* Adjust base font size as needed */
+  line-height: 1.8; /* Adjust line height for readability */
+}
+
+
+/* Styles for Chinese Posts (或者 .content hX) */
+  .chinese-content h1 {
+    /* ...其他样式... */
+    color: #0040A8; /* 或者 color: hsl(212, 100%, 33%); */
+  }
+  .chinese-content h2 {
+    /* ...其他样式... */
+    color: #1157AA; /* 或者 color: hsl(210, 86%, 39%); */
+  }
+  .chinese-content h3 {
+    /* ...其他样式... */
+    color: #3579B8; /* 或者 color: hsl(208, 58%, 49%); */
+  }
+  .chinese-content h4 {
+    /* ...其他样式... */
+    color: #5FA4E0; /* 或者 color: hsl(209, 70%, 62%); */
+  }
+  .chinese-content h5 {
+    /* ...其他样式... */
+    color: #88BCED; /* 或者 color: hsl(209, 65%, 72%); */
+  }
+  .chinese-content h6 {
+    /* ...其他样式... */
+    color: #88BCED; /* 或者 color: hsl(209, 65%, 72%); */
+  }
+.chinese-content p {
+  font-size: 1rem; /* Base paragraph size (relative to the body font size) */
+  margin-bottom: 1.2em; /* Spacing below paragraphs */
+}
+
+/* ... 你已有的 .chinese-content 相关 CSS 规则 ... */
+
+.chinese-content p {
+  font-size: 1rem; /* Base paragraph size (relative to the body font size) */
+  margin-bottom: 1.2em; /* Spacing below paragraphs */
+}
+
+/* 新增：确保列表项与段落字体大小和风格一致 */
+.chinese-content ul li,
+.chinese-content ol li {
+  font-family: inherit; /* 确保列表项继承 .chinese-content 的字体设置 */
+  font-size: 1rem;      /* 设置与段落相同的相对字体大小 */
+  line-height: 1.7;   /* 你可以根据需要调整列表项的行高，1.8 可能对列表项来说略大 */
+  margin-bottom: 0.5em; /* (可选) 调整列表项之间的垂直间距 */
+}
+article h2 {
+    color: #1157AA;
+  }
