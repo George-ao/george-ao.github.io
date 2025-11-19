@@ -1,0 +1,180 @@
+body {
+    /* Palatino: Mac 上最经典的圆润衬线体，比 Charter 更柔和。
+       Georgia: 屏幕阅读优化的圆润字体。
+    */
+    font-family: Georgia, "Palatino", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+    
+    /* 字体调大：从默认的 16px 提升到 20px，极简风通常字都比较大 */
+    font-size: 17px; 
+    
+    /* 行高配合字号微调，保持呼吸感 */
+    line-height: 1.8; 
+    
+    /* 颜色保持 */
+    color: #333;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    
+    /* 保持抗锯齿 */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* 同时，为了配合变大的正文，我们需要微调一下标题和元数据的比例 */
+
+/* 导航栏文字稍微大一点 */
+nav a {
+    font-size: 1.2rem; 
+}
+
+/* 日期等小字稍微大一点 */
+.meta, .date {
+    font-size: 0.85rem;
+}
+
+/* 布局容器：控制阅读宽度 */
+.container {
+    max-width: 720px; /* 经典的学术博客宽度，利于阅读 */
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+/* 头部与导航 */
+header {
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee; /* 极细的分割线 */
+    padding-bottom: 1rem;
+}
+
+header h1 a {
+    color: #000;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+nav a {
+    margin-right: 15px;
+    color: #666;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+nav a:hover {
+    color: #000;
+    text-decoration: underline;
+}
+
+h1, h2, h3, h4 {
+    color: #1a1a1a; /* 不要用纯黑 #000，太硬。用 #1a1a1a 或 #2c3e50 */
+    font-weight: 600; /* 稍微加粗，增加权重 */
+    letter-spacing: -0.02em; /* 字母稍微紧凑一点，更像印刷品 */
+    margin-top: 2em; /* 增加标题上方的留白，利用空间来强调重点，而不是颜色 */
+}
+
+/* 文章内容样式 */
+article h1, article h2, article h3 {
+    margin-top: 2rem;
+    color: #111;
+}
+
+/* 链接样式 - 模仿截图中的蓝色 */
+a {
+    color: #0056b3;
+    text-decoration: none;
+    border-bottom: 1px solid transparent; /* 预留一条透明下划线 */
+    transition: all 0.2s ease;
+}
+a:hover {
+    color: #0056b3;
+    border-bottom: 1px solid #0056b3; /* 鼠标悬停时才显示精致的下划线 */
+    text-decoration: none; /* 去掉默认粗糙的下划线 */
+}
+
+/* 代码块样式 */
+pre {
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 5px;
+    overflow-x: auto;
+    font-family: "Menlo", "Consolas", monospace;
+    font-size: 0.9em;
+}
+code {
+    font-family: "Menlo", "Monaco", monospace;
+    background-color: rgba(27, 31, 35, 0.05); /* 给行内代码加一个淡淡的底色 */
+    padding: 0.2em 0.4em;
+    border-radius: 3px;
+    font-size: 0.85em;
+}
+/* 图片样式 */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+
+/* 列表页样式 */
+.post-list {
+    list-style: none;
+    padding: 0;
+}
+.post-list li {
+    margin-bottom: 10px;
+}
+.date {
+    color: #777;
+    margin-right: 15px;
+    font-family: monospace;
+}
+
+/* 简历布局：左侧年份(140px)，右侧详情(自动填充) */
+.cv-entry {
+    display: grid;
+    grid-template-columns: 140px 1fr; 
+    gap: 0 20px;
+    margin-bottom: 1.5rem; /* 每个条目之间的距离 */
+}
+
+/* 手机端自动变成单列，防止年份挤压 */
+@media (max-width: 600px) {
+    .cv-entry {
+        grid-template-columns: 1fr;
+        margin-bottom: 2rem;
+    }
+    .cv-year {
+        margin-bottom: 4px;
+        color: #888;
+    }
+}
+
+.cv-year {
+    font-variant-numeric: tabular-nums; /* 数字等宽对齐 */
+    color: #666;
+}
+
+.cv-school {
+    font-weight: 600; /* 学校加粗 */
+    color: #000;
+}
+
+.cv-degree {
+    /* 学位保持正常或微调 */
+    color: #333;
+}
+
+
+
+/* 元数据（日期、分类等）变灰 */
+.meta, .date, .cv-year {
+    color: #888; /* 灰色，让它视觉上“退后” */
+    font-size: 0.9rem;
+}
+
+/* 强调重点 (Strong/Bold) */
+strong, b {
+    color: #000; /* 重点文字用纯黑 */
+    font-weight: 700; /* 明显加粗 */
+}

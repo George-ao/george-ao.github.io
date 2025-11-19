@@ -1,0 +1,18 @@
+baseURL = "https://george-ao.github.io"
+languageCode = "en-us"
+title = "Yuyi Ao"
+
+# 启用 Goldmark 解析器的数学公式扩展 (为 LaTeX 准备)
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['$$', '$$'], ['\\[', '\\]']]
+          inline = [['$', '$'], ['\\(', '\\)']]
+  [markup.highlight]
+    style = "friendly" # 代码高亮配色
+    lineNos = false

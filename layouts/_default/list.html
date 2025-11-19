@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section>
+    <ul class="post-list">
+        {{ range .Pages }}
+        <li>
+            <span class="date" style="min-width: 120px; display: inline-block;">
+                {{ .Date.Format "2006-01-02" }}
+            </span>
+            <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+        </li>
+        {{ end }}
+    </ul>
+</section>
+{{ end }}
