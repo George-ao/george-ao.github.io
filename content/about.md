@@ -5,7 +5,7 @@ hidetitle: true         # <--- 加上这一行，页面正文就不显示标题�
 ---
 
 
-I am a Master's student at **Carnegie Mellon University**. I am interested in Machine Learning Systems.
+I am a Master's student at **Carnegie Mellon University**. I enjoy solving problems that sit at the intersection of algorithms, systems, and machine learning.
 
 ---
 
