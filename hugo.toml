@@ -8,6 +8,7 @@ title = "Yuyi Ao"
     [markup.goldmark.renderer]
       unsafe = true
     [markup.goldmark.extensions]
+      attributes = true
       [markup.goldmark.extensions.passthrough]
         enable = true
         [markup.goldmark.extensions.passthrough.delimiters]
